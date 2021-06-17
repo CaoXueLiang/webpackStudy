@@ -1,3 +1,4 @@
 .elelmentClass {
   color: red;
+  user-select: none;
 }
