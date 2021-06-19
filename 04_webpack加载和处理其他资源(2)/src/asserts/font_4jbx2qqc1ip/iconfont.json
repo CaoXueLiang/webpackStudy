@@ -1,0 +1,65 @@
+{
+  "id": "",
+  "name": "",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "22002723",
+      "name": "计算器",
+      "font_class": "jisuanqi",
+      "unicode": "e8ab",
+      "unicode_decimal": 59563
+    },
+    {
+      "icon_id": "22002724",
+      "name": "卡包",
+      "font_class": "kabao",
+      "unicode": "e8ac",
+      "unicode_decimal": 59564
+    },
+    {
+      "icon_id": "22002725",
+      "name": "短信",
+      "font_class": "duanxin",
+      "unicode": "e8ad",
+      "unicode_decimal": 59565
+    },
+    {
+      "icon_id": "22002727",
+      "name": "商城",
+      "font_class": "shangcheng",
+      "unicode": "e8ae",
+      "unicode_decimal": 59566
+    },
+    {
+      "icon_id": "22002728",
+      "name": "日历",
+      "font_class": "rili",
+      "unicode": "e8af",
+      "unicode_decimal": 59567
+    },
+    {
+      "icon_id": "22002729",
+      "name": "设置",
+      "font_class": "shezhi",
+      "unicode": "e8b0",
+      "unicode_decimal": 59568
+    },
+    {
+      "icon_id": "22002730",
+      "name": "闹钟",
+      "font_class": "naozhong",
+      "unicode": "e8b1",
+      "unicode_decimal": 59569
+    },
+    {
+      "icon_id": "22002731",
+      "name": "天气",
+      "font_class": "tianqi",
+      "unicode": "e8b2",
+      "unicode_decimal": 59570
+    }
+  ]
+}
