@@ -1,5 +1,5 @@
 import "../css/normal.css";
-import zznhImage from "../asserts/xiaoxin.jpeg";
+import zznhImage from "../asserts/snapaste.png";
 
 function createImage() {
   let tmpImage = new Image();
