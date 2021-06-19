@@ -1,0 +1,17 @@
+{
+  "name": "05wepack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "wk.config.js",
+  "scripts": {
+    "build": "webpack --config wk.config.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "css-loader": "^5.2.6",
+    "style-loader": "^2.0.0",
+    "webpack": "^5.39.1",
+    "webpack-cli": "^4.7.2"
+  }
+}
