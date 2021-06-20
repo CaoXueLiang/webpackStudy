@@ -1,4 +1,8 @@
 const { resolve } = require("path");
+const { CleanWebpackPlugin } = require("clean-webpack-plugin");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { DefinePlugin } = require("webpack");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   entry: "./src/main.js",
@@ -14,5 +18,25 @@ module.exports = {
       },
     ],
   },
-  mode: "production",
+  plugins: [
+    new CleanWebpackPlugin(),
+    new HtmlWebpackPlugin({
+      title: "webpack示例plugin",
+      template: "./public/index.html",
+    }),
+    new DefinePlugin({
+      BASE_URL: '"./"',
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: "public",
+          globOptions: {
+            ignore: ["**/index.html", "**/DS_Store"],
+          },
+        },
+      ],
+    }),
+  ],
+  mode: "development",
 };
