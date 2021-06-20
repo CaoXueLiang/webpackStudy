@@ -1,0 +1,11 @@
+
+
+一、开发阶段：推荐使用 source-map或者cheap-module-source-map
+   这分别是vue和react使用的值，可以获取调试信息，方便快速开发；
+
+
+二、测试阶段：推荐使用 source-map或者cheap-module-source-map
+   测试阶段我们也希望在浏览器下看到正确的错误提示；
+
+
+三、发布阶段：false、缺省值（不写）
