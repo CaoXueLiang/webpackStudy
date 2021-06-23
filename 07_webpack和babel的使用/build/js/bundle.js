@@ -1,12 +1,4 @@
-/*
- * ATTENTION: The "eval" devtool has been used (maybe by default in mode: "development").
- * This devtool is neither made for production nor for readable output files.
- * It uses "eval()" calls to create a separate source file in the browser devtools.
- * If you are trying to read the output file, select a different devtool (https://webpack.js.org/configuration/devtool/)
- * or disable the default devtool with "devtool: false".
- * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).
- */
-/******/ (() => { // webpackBootstrap
+/******/ (function() { // webpackBootstrap
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
@@ -14,9 +6,15 @@
 /*!**************************!*\
   !*** ./src/js/format.js ***!
   \**************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"formateDate\": () => (/* binding */ formateDate)\n/* harmony export */ });\nfunction formateDate() {\n  return \"2020-11-22\";\n}\n\n\n//# sourceURL=webpack://07webpackbabel/./src/js/format.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "formateDate": function() { return /* binding */ formateDate; }
+/* harmony export */ });
+function formateDate() {
+  return "2020-11-22";
+}
 
 /***/ }),
 
@@ -24,19 +22,19 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpac
 /*!************************!*\
   !*** ./src/js/math.js ***!
   \************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export */ __webpack_require__.d(__webpack_exports__, {\n/* harmony export */   \"sum\": () => (/* binding */ sum),\n/* harmony export */   \"mul\": () => (/* binding */ mul)\n/* harmony export */ });\nfunction sum(num1, num2) {\n  return num1 + num2;\n}\n\nfunction mul(num1, num2) {\n  return num1 * num2;\n}\n\n\n//# sourceURL=webpack://07webpackbabel/./src/js/math.js?");
-
-/***/ }),
-
-/***/ "./src/main.js":
-/*!*********************!*\
-  !*** ./src/main.js ***!
-  \*********************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _src_js_format__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../src/js/format */ \"./src/js/format.js\");\n/* harmony import */ var _src_js_math__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../src/js/math */ \"./src/js/math.js\");\n\n\n\nconsole.log((0,_src_js_format__WEBPACK_IMPORTED_MODULE_0__.formateDate)());\nconsole.log((0,_src_js_math__WEBPACK_IMPORTED_MODULE_1__.sum)(10, 20));\nconsole.log((0,_src_js_math__WEBPACK_IMPORTED_MODULE_1__.mul)(10, 20));\n\n\n//# sourceURL=webpack://07webpackbabel/./src/main.js?");
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "sum": function() { return /* binding */ sum; },
+/* harmony export */   "mul": function() { return /* binding */ mul; }
+/* harmony export */ });
+function sum(num1, num2) {
+  return num1 + num2;
+}
+function mul(num1, num2) {
+  return num1 * num2;
+}
 
 /***/ })
 
@@ -68,39 +66,67 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _src
 /******/ 	
 /************************************************************************/
 /******/ 	/* webpack/runtime/define property getters */
-/******/ 	(() => {
+/******/ 	!function() {
 /******/ 		// define getter functions for harmony exports
-/******/ 		__webpack_require__.d = (exports, definition) => {
+/******/ 		__webpack_require__.d = function(exports, definition) {
 /******/ 			for(var key in definition) {
 /******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
 /******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
 /******/ 				}
 /******/ 			}
 /******/ 		};
-/******/ 	})();
+/******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
-/******/ 	(() => {
-/******/ 		__webpack_require__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
-/******/ 	})();
+/******/ 	!function() {
+/******/ 		__webpack_require__.o = function(obj, prop) { return Object.prototype.hasOwnProperty.call(obj, prop); }
+/******/ 	}();
 /******/ 	
 /******/ 	/* webpack/runtime/make namespace object */
-/******/ 	(() => {
+/******/ 	!function() {
 /******/ 		// define __esModule on exports
-/******/ 		__webpack_require__.r = (exports) => {
+/******/ 		__webpack_require__.r = function(exports) {
 /******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
 /******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true });
 /******/ 		};
-/******/ 	})();
+/******/ 	}();
 /******/ 	
 /************************************************************************/
-/******/ 	
-/******/ 	// startup
-/******/ 	// Load entry module and return exports
-/******/ 	// This entry module can't be inlined because the eval devtool is used.
-/******/ 	var __webpack_exports__ = __webpack_require__("./src/main.js");
-/******/ 	
+var __webpack_exports__ = {};
+// This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
+!function() {
+/*!*********************!*\
+  !*** ./src/main.js ***!
+  \*********************/
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _src_js_format__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../src/js/format */ "./src/js/format.js");
+/* harmony import */ var _src_js_math__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../src/js/math */ "./src/js/math.js");
+// import "core-js/stable";
+// import "regenerator-runtime/runtime";
+
+
+console.log((0,_src_js_format__WEBPACK_IMPORTED_MODULE_0__.formateDate)());
+console.log((0,_src_js_math__WEBPACK_IMPORTED_MODULE_1__.sum)(10, 20));
+console.log((0,_src_js_math__WEBPACK_IMPORTED_MODULE_1__.mul)(10, 20));
+var tmpArray = ["xiao_ming", "xiao_hong", "xiao_liang", "li_ning"];
+tmpArray.forEach(function (item) {
+  console.log(item);
+});
+
+function requestMethod() {
+  return new Promise(function (resolve, reject) {
+    setTimeout(function () {
+      resolve("倒计时结束");
+    }, 1000);
+  });
+}
+
+requestMethod().then(function (res) {
+  console(res);
+});
+}();
 /******/ })()
 ;
+//# sourceMappingURL=bundle.js.map
