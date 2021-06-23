@@ -1,0 +1,16 @@
+{
+  "name": "07webpackbabel",
+  "version": "1.0.0",
+  "description": "",
+  "main": "wk.config.js",
+  "scripts": {
+    "build": "webpack --config wk.config.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "clean-webpack-plugin": "^4.0.0-alpha.0",
+    "webpack": "^5.40.0",
+    "webpack-cli": "^4.7.2"
+  }
+}
