@@ -8,6 +8,6 @@ module.exports = {
       { useBuiltIns: "entry", corejs: 3 },
     ],
     ["@babel/preset-react"],
-    ["@babel/preset-typesctipt"],
+    ["@babel/preset-typescript"],
   ],
 };

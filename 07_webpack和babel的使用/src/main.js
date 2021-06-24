@@ -3,6 +3,7 @@ import "regenerator-runtime/runtime";
 
 import { formateDate } from "../src/js/format";
 import { sum, mul } from "../src/js/math";
+import "./js/test.ts";
 
 console.log(formateDate());
 console.log(sum(10, 20));
