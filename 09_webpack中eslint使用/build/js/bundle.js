@@ -1,13 +1,31 @@
 /******/ (function() { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
+/***/ "./src/js/normal.js":
+/*!**************************!*\
+  !*** ./src/js/normal.js ***!
+  \**************************/
+/***/ (function() {
+
+function createDiv() {
+  var tmpDiv = document.createElement('div');
+  tmpDiv.style.background = 'yellow';
+  tmpDiv.style.height = '100px';
+  tmpDiv.style.width = '100px';
+  document.body.appendChild(tmpDiv);
+}
+
+createDiv();
+
+/***/ }),
+
 /***/ "./src/js/test.ts":
 /*!************************!*\
   !*** ./src/js/test.ts ***!
   \************************/
 /***/ (function() {
 
-var hello = "Hello World!";
+var hello = 'Hello World!';
 console.log(hello); // hello = "1";
 
 /***/ })
@@ -90,6 +108,9 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _js_test_ts__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./js/test.ts */ "./src/js/test.ts");
 /* harmony import */ var _js_test_ts__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_js_test_ts__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _js_normal__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./js/normal */ "./src/js/normal.js");
+/* harmony import */ var _js_normal__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_js_normal__WEBPACK_IMPORTED_MODULE_1__);
+
 
 }();
 /******/ })()

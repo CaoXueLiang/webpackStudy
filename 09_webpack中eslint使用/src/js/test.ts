@@ -1,4 +1,4 @@
-const hello: String = "Hello World!";
+const hello: String = 'Hello World!';
 console.log(hello);
 
 // hello = "1";

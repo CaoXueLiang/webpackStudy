@@ -1,25 +1,26 @@
-const { resolve } = require("path");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
-const CopyWebpackPlugin = require("copy-webpack-plugin");
-const { DefinePlugin } = require("webpack");
+const { resolve } = require('path');
+const { CleanWebpackPlugin } = require('clean-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const CopyWebpackPlugin = require('copy-webpack-plugin');
+const { DefinePlugin } = require('webpack');
 
 module.exports = {
-  devtool: "source-map",
-  entry: "./src/main.js",
+  devtool: 'source-map',
+  entry: './src/main.js',
   output: {
-    filename: "js/bundle.js",
-    path: resolve(__dirname, "build"),
+    filename: 'js/bundle.js',
+    path: resolve(__dirname, 'build'),
   },
   module: {
     rules: [
       {
         test: /\.(js|ts)$/,
-        exclude: /node_moudle/,
+        exclude: /node_moudles/,
         use: [
           {
-            loader: "babel-loader",
+            loader: 'babel-loader',
           },
+          { loader: 'eslint-loader' },
         ],
       },
     ],
@@ -27,8 +28,8 @@ module.exports = {
   plugins: [
     new CleanWebpackPlugin(),
     new HtmlWebpackPlugin({
-      title: "Babel打包typeScript",
-      template: "./public/index.html",
+      title: 'Babel打包typeScript',
+      template: './public/index.html',
     }),
     new DefinePlugin({
       BASE_URL: '"./"',
@@ -36,13 +37,13 @@ module.exports = {
     new CopyWebpackPlugin({
       patterns: [
         {
-          from: "public",
+          from: 'public',
           globOptions: {
-            ignore: ["**/index.html", "**/DS_Store"],
+            ignore: ['**/index.html', '**/DS_Store'],
           },
         },
       ],
     }),
   ],
-  mode: "development",
+  mode: 'development',
 };

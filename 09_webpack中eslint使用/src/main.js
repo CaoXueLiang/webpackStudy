@@ -1,2 +1,2 @@
-import "./js/test.ts";
-import "./js/normal";
+import './js/test.ts';
+import './js/normal';
