@@ -4,7 +4,8 @@
   "description": "",
   "main": "wk.config.js",
   "scripts": {
-    "build": "webpack --config wk.config.js"
+    "build": "webpack --config wk.config.js",
+    "watch": "webpack --watch"
   },
   "author": "",
   "license": "ISC",
