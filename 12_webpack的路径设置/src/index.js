@@ -1,6 +1,6 @@
-import { cereateDiv, createSpan } from "./js/cereatElement";
-import { formateMethod } from "./js/formate";
-import "./js/math";
+import { cereateDiv, createSpan } from "js/cereatElement";
+import { formateMethod } from "js/formate";
+import "js/math";
 
 const tmpDiv = cereateDiv();
 const tmpSpan = createSpan();

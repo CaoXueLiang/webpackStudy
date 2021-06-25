@@ -1,4 +1,4 @@
-import "../css/normal.css";
+import "@/css/normal.css";
 
 export function cereateDiv() {
   const tmpDiv = document.createElement("div");
