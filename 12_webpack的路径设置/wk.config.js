@@ -11,13 +11,12 @@ module.exports = {
   entry: "./src/index.js",
   output: {
     filename: "js/bundle.js",
-    path: resolve(__dirname, "./build"),
-    publicPath: "/",
+    path: resolve(__dirname, "build"),
+    publicPath: "/abc",
   },
 
   devServer: {
     hot: true,
-    contentBase: "./build",
     open: true,
     port: "8524",
   },
