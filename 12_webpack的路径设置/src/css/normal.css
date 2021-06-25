@@ -1,5 +1,5 @@
 .divContent {
-  background: green;
+  background: #fff;
   color: #fff;
   width: 200px;
   height: 200px;
@@ -11,5 +11,5 @@
 .spanContent {
   width: 120px;
   height: 100px;
-  background: yellowgreen;
+  background: yellow;
 }

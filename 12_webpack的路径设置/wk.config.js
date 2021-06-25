@@ -12,11 +12,12 @@ module.exports = {
   output: {
     filename: "js/bundle.js",
     path: resolve(__dirname, "build"),
-    publicPath: "/abc",
+    // publicPath: "/abc",
   },
 
   devServer: {
     hot: true,
+    hotOnly: true,
     open: true,
     port: "8524",
   },
