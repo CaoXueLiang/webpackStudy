@@ -5,7 +5,8 @@
   "main": "wk.config.js",
   "scripts": {
     "build": "webpack --config wk.config.js",
-    "watch": "webpack --watch"
+    "watch": "webpack --watch --config wk.config.js",
+    "serve": "webpack serve --config wk.config.js"
   },
   "author": "",
   "license": "ISC",
@@ -17,6 +18,7 @@
     "html-webpack-plugin": "^5.3.2",
     "style-loader": "^2.0.0",
     "webpack": "^5.40.0",
-    "webpack-cli": "^4.7.2"
+    "webpack-cli": "^4.7.2",
+    "webpack-dev-server": "^3.11.2"
   }
 }

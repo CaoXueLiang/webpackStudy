@@ -1,3 +1,9 @@
+/**
+ * 1.npm run watch 只能监听文件的变化，浏览器不会跟着刷新
+ * 2.npm run serve 能监听文件的变化而且也能实时刷新浏览器
+ *
+ */
+
 const { resolve } = require("path");
 const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
@@ -12,6 +18,13 @@ module.exports = {
   output: {
     filename: "js/bundle.js",
     path: resolve(__dirname, "./build"),
+  },
+
+  devServer: {
+    hot: true,
+    contentBase: "./build",
+    open: true,
+    port: "8524",
   },
   module: {
     rules: [
