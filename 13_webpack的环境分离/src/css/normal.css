@@ -1,0 +1,15 @@
+.divContent {
+  background: #fff;
+  color: #fff;
+  width: 200px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spanContent {
+  width: 120px;
+  height: 100px;
+  background: yellow;
+}
