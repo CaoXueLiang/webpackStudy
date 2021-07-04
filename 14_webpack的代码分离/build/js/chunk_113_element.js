@@ -1,0 +1,1 @@
+(self.webpackChunk_11webpack=self.webpackChunk_11webpack||[]).push([[113],{628:(e,c,n)=>{"use strict";n.r(c),n.d(c,{default:()=>l});const t=document.createElement("div");t.innerHTML="hello world";const l=t}}]);

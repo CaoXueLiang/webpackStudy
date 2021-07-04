@@ -1,0 +1,1 @@
+(self.webpackChunk_11webpack=self.webpackChunk_11webpack||[]).push([[822],{614:(e,c,t)=>{"use strict";t.r(c),t.d(c,{default:()=>s});const n=document.createElement("div");n.style.color="red",n.innerHTML="我是bar——01";const s=n}}]);
