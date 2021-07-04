@@ -29,6 +29,11 @@ const commonConfig = {
   optimization: {
     // natural ,namned ,deterministic
     chunkIds: "deterministic",
+    //1. true(针对每个入口文件打包一个runtime)  2. single（打包一个runtime文件）  3. name（定义runtimeChunk文件的名字）
+    // runtimeChunk: "single",
+    runtimeChunk: {
+      name: "runtimesssss",
+    },
     splitChunks: {
       chunks: "all",
       // 最小尺寸: 如果拆分出来一个, 那么拆分出来的这个包的大小最小为minSize
@@ -39,12 +44,12 @@ const commonConfig = {
       cacheGroups: {
         venders: {
           test: /[\\/]node_modules[\\/]/,
-          filename: "[id]_vender.js",
+          filename: "js/[id]_vender.js",
           priority: -10,
         },
         default: {
           minChunks: 2,
-          filename: "common_[id].js",
+          filename: "js/common_[id].js",
           priority: -20,
         },
       },
