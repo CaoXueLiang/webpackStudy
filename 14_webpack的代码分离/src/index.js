@@ -11,4 +11,5 @@ button.addEventListener("click", () => {
     document.body.appendChild(element);
   });
 });
+
 document.body.appendChild(button);

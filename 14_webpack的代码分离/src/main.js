@@ -1,4 +1,5 @@
 import _ from "lodash";
+import "./normal.css";
 let array1 = [5, 6];
 let array2 = [3, 4];
 console.log(_.concat(array1, array2));

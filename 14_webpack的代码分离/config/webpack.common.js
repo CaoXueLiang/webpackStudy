@@ -7,6 +7,7 @@ const { merge } = require("webpack-merge");
 const developmentConfig = require("./webpack.dev");
 const productionConfig = require("./webpack.prod");
 const { ConcatenationScope } = require("webpack");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 const commonConfig = {
   entry: {
@@ -17,7 +18,7 @@ const commonConfig = {
     // shared: ["lodash"],
   },
   output: {
-    filename: "js/[name].bundle.js",
+    filename: "js/[name].[chunkhash:8].bundle.js",
     chunkFilename: "js/chunk_[id]_[name].js",
     path: resolveApp("./build"),
     // publicPath: "/abc",
@@ -59,7 +60,10 @@ const commonConfig = {
     rules: [
       {
         test: /\.css$/,
-        use: [{ loader: "style-loader" }, { loader: "css-loader" }],
+        use: [
+          { loader: MiniCssExtractPlugin.loader },
+          { loader: "css-loader" },
+        ],
       },
     ],
   },
@@ -80,6 +84,9 @@ const commonConfig = {
           },
         },
       ],
+    }),
+    new MiniCssExtractPlugin({
+      filename: "css/[name].[contenthash:8].css",
     }),
   ],
 };
