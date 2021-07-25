@@ -1,0 +1,1 @@
+(()=>{"use strict";console.log(function sunMethod(n,o){return n+o}(10,20))})();
