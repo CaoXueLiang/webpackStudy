@@ -16,9 +16,9 @@ module.exports = {
         test: /\.(jpeg|jpg|png|svg)$/,
         use: [
           {
-            // loader: "file-loader",
-            loader: "url-loader", //可以将图片转化为base64
-            options: { limit: 100 * 1024, name: "img/[name].[hash:8].[ext]" },
+            loader: "file-loader",
+            // loader: "url-loader", //可以将图片转化为base64
+            // options: { limit: 100 * 1024, name: "img/[name].[hash:8].[ext]" },
           },
         ],
       },

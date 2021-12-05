@@ -1,0 +1,21 @@
+@import "./test.css";
+@import "./comment.less";
+@import "../font/iconfont.css";
+
+.content {
+  color: red;
+}
+
+.icon_image {
+  font-size: 50px;
+  color: red;
+}
+/* 
+:fullscreen {
+  color: #12345678;
+}
+
+.content {
+  user-select: none;
+  animation: cubic-bezier(0.075, 0.82, 0.165, 1);
+} */

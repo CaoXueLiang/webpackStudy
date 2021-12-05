@@ -1,0 +1,14 @@
+@import "./test.css";
+
+.content {
+  color: red;
+}
+/* 
+:fullscreen {
+  color: #12345678;
+}
+
+.content {
+  user-select: none;
+  animation: cubic-bezier(0.075, 0.82, 0.165, 1);
+} */
