@@ -1,4 +1,7 @@
 const { resolve } = require("path");
+const HtmlWebpackPlugin = require("html-webpack-plugin");
+const { DefinePlugin } = require("webpack");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
 module.exports = {
   entry: "./src/main.js",
   output: {
@@ -29,9 +32,6 @@ module.exports = {
             loader: "css-loader",
             options: {
               importLoaders: 2,
-              // 0 => no loaders (default);
-              // 1 => postcss-loader;
-              // 2 => postcss-loader, less-loader
             },
           },
           "postcss-loader",
@@ -59,4 +59,23 @@ module.exports = {
       },
     ],
   },
+  plugins: [
+    new HtmlWebpackPlugin({
+      title: "webpack实用plugin",
+      template: "./public/index.html",
+    }),
+    new DefinePlugin({
+      BASE_URL: JSON.stringify("./"),
+    }),
+    new CopyWebpackPlugin({
+      patterns: [
+        {
+          from: "public",
+          globOptions: {
+            ignore: ["**/index.html", "**/.DS_Store"],
+          },
+        },
+      ],
+    }),
+  ],
 };
