@@ -8,4 +8,4 @@ foo('abc');
 
 // const p = new Promise((resolve, reject) => {})
 
-export {};
+export { foo };
