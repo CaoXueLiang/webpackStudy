@@ -15,8 +15,8 @@ module.exports = {
   devServer: {
     open: true,
     hot: 'only',
-    // host: '0.0.0.0',
-    // port: '5520',
+    host: '0.0.0.0',
+    port: '5520',
     static: 'why', //默认值是public，从目录配置静态文件的选项
     compress: true,
     proxy: {
@@ -27,9 +27,34 @@ module.exports = {
         changeOrigin: true, //默认情况下，代理会保留主机头的来源，可以将`changeOrigin设置为true`覆盖该行为
       },
     },
+    historyApiFallback: true,
+  },
+  resolve: {
+    //如果是一个文件夹，会在文件夹中根据 resolve.mainFiles配置选项中指定的文件顺序查找。mainFiles默认值是`["index"]`,之后在根据`resolve.extensions`来解析扩展名
+    mainFiles: ['index'],
+    //默认值是`['.wasm', '.mjs', '.js', '.json']`,尝试按顺序解析这些后缀名, 你可以使用 '...' 访问默认拓展名
+    extensions: ['.js', '.vue', '...'],
+    //设置别名,注意路径问题
+    alias: {
+      imgs: resolve(__dirname, './assets/img'),
+      '@': resolve(__dirname, './views'),
+    },
   },
   module: {
     rules: [
+      {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          {
+            loader: 'css-loader',
+            options: {
+              importLoaders: 2,
+            },
+          },
+          'postcss-loader',
+        ],
+      },
       {
         test: /\.less$/,
         use: [
@@ -58,6 +83,18 @@ module.exports = {
         test: /\.vue$/,
         exclude: /node_modules/,
         use: 'vue-loader',
+      },
+      {
+        test: /\.(jpg|png)$/,
+        type: 'asset',
+        generator: {
+          filename: 'img/[name].[hash:6].[ext]',
+        },
+        parser: {
+          dataUrlCondition: {
+            maxSize: 100 * 1024,
+          },
+        },
       },
     ],
   },

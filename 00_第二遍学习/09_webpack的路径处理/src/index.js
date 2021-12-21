@@ -4,9 +4,10 @@ import { sum } from './math.js';
 import Vue from 'vue';
 import app from './app.vue';
 
+import '@/index';
+
 console.log('Hello Coderwhy');
 console.log('abc');
-
 console.log(sum(20, 80));
 
 if (module.hot) {
