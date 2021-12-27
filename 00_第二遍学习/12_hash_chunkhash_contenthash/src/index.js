@@ -1,11 +1,11 @@
 import _ from 'lodash';
-import moment from 'moment';
+import dayjs from 'dayjs';
 import '../styles/normal.css';
 // import './bar_01';
 
 console.log('Hello Index');
 console.log(_.join(['hello', 'Index']));
-console.log(moment().format('YYYY-MM-DD'));
+console.log(dayjs(), '----dayjs---');
 
 function addButtonElement() {
   const button = document.createElement('button');

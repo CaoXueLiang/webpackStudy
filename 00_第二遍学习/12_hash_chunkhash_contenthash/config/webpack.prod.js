@@ -4,7 +4,12 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const prodConfig = {
   mode: 'production',
-  plugins: [new MiniCssExtractPlugin({ filename: 'css/[name].[hash:8].css', chunkFilename: 'css/[name].[hash:8].css' })],
+  plugins: [
+    new MiniCssExtractPlugin({
+      filename: 'css/[name].[contenthash:8].css',
+      chunkFilename: 'css/[name].[contenthash:8].css',
+    }),
+  ],
 };
 
 module.exports = merge(commonConfig('production'), prodConfig);

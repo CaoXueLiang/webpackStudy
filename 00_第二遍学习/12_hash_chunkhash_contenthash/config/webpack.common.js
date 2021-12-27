@@ -10,7 +10,7 @@ module.exports = (enviroment) => {
     entry: { index: './src/index.js' },
     output: {
       filename: '[name].bundle.js',
-      chunkFilename: 'chunk-[name].[hash:6].js',
+      chunkFilename: 'chunk-[name].[chunkhash:6].js',
       path: resolveApp('./dist'),
       clean: true,
     },
@@ -30,7 +30,7 @@ module.exports = (enviroment) => {
       ],
       splitChunks: {
         chunks: 'all',
-        minSize: 20000,
+        minSize: 200000,
         maxSize: 200000,
         minChunks: 1,
         maxAsyncRequests: 30,
@@ -103,7 +103,7 @@ module.exports = (enviroment) => {
           test: /\.(jpg|png)$/,
           type: 'asset',
           generator: {
-            filename: 'img/[name].[hash:6].[ext]',
+            filename: 'img/[name].[content:6].[ext]',
           },
           parser: {
             dataUrlCondition: {
