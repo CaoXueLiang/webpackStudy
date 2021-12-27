@@ -5,19 +5,19 @@ const devConfig = {
   mode: 'development',
   devtool: 'source-map',
   devServer: {
-    open: true,
+    // open: true,
     hot: 'only',
     host: '0.0.0.0',
     port: '5520',
     compress: true,
-    proxy: {
-      '/why': {
-        target: 'http://127.0.0.1:3000',
-        pathRewrite: { '^/why': '' },
-        secure: false,
-        changeOrigin: true,
-      },
-    },
+    // proxy: {
+    //   '/why': {
+    //     target: 'http://127.0.0.1:3000',
+    //     pathRewrite: { '^/why': '' },
+    //     secure: false,
+    //     changeOrigin: true,
+    //   },
+    // },
     historyApiFallback: true,
   },
 };
