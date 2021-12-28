@@ -1,44 +1,37 @@
-import _ from 'lodash';
-import dayjs from 'dayjs';
-import '../styles/normal.css';
-// import './bar_01';
+import './style.css';
 
-console.log('Hello Index');
-console.log(_.join(['hello', 'Index']));
-console.log(dayjs(), '----dayjs---');
+const message = 'Hello World';
+console.log(message);
 
-function addButtonElement() {
-  const button = document.createElement('button');
-  button.innerHTML = '加载元素';
-  document.body.appendChild(button);
-  // preload chunk会随父chunk并行加载。prefetch chunk会在父chunk加载完毕后才开始加载
-  // preload chunk具有中等优先级，并立即下载。 preferch chunk会在浏览器空闲时进行下载
-  button.onclick = function () {
-    import(
-      /* webpackChunkName: "element" */
-      /* webpackPrefetch: true */
-      './element'
-    ).then((res) => {
-      console.log('element', res.default);
-      document.body.appendChild(res.default);
-    });
-  };
+function sum(num1, num2) {
+  return arguments[0] + arguments[1];
 }
-addButtonElement();
 
-function addButtonElement2() {
-  const button = document.createElement('button');
-  button.innerHTML = '加载组件';
-  document.body.appendChild(button);
-  button.onclick = function () {
-    import(
-      /* webpackChunkName: "compoment" */
-      /* webpackPrefetch: true */
-      './compoment'
-    ).then((res) => {
-      console.log('compoment', res.default);
-      document.body.appendChild(res.default);
-    });
-  };
+//调用math的方法
+console.log(sum(20, 30));
+
+debugger;
+
+const infoMethod = function (message) {
+  console.log('message', message);
+};
+infoMethod('xiaoming-20-hh');
+
+if (false) {
+  console.log('哈哈哈');
 }
-addButtonElement2();
+
+if (true) console.log('sucess log');
+
+class Person {
+  constructor(name, age) {
+    this.name = name;
+    this.age = age;
+  }
+  eating() {
+    console.log(`name:${this.name}-age:${this.age}`);
+  }
+}
+
+const person1 = new Person('kobe', 30);
+console.log('person1', person1);

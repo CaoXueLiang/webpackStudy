@@ -1,6 +1,5 @@
 const resolveApp = require('./path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
-const TerserPlugin = require('terser-webpack-plugin');
 const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
@@ -23,11 +22,6 @@ module.exports = (enviroment) => {
       },
     },
     optimization: {
-      minimizer: [
-        new TerserPlugin({
-          extractComments: false,
-        }),
-      ],
       splitChunks: {
         chunks: 'all',
         minSize: 200000,
