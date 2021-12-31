@@ -1,0 +1,26 @@
+body {
+  background-color: lightblue;
+}
+
+html {
+  font-size: 20px;
+}
+
+.title {
+  color: red;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+h2 {
+  color: green;
+}
+
+h3 {
+  color: yellow;
+}
+
+.normaltitle {
+  font-size: 20px;
+  color: #f0f0f0;
+}
