@@ -8,8 +8,8 @@ module.exports = (enviroment) => {
   return {
     entry: { index: './src/index.js' },
     output: {
-      filename: '[name].bundle.js',
-      chunkFilename: 'chunk-[name].[chunkhash:6].js',
+      filename: 'js/[name].bundle.js',
+      chunkFilename: 'js/chunk-[name].[chunkhash:6].js',
       path: resolveApp('./dist'),
       clean: true,
     },
@@ -53,6 +53,7 @@ module.exports = (enviroment) => {
       rules: [
         {
           test: /\.css$/,
+          sideEffects: true,
           use: [
             isProduction ? MiniCssExtractPlugin.loader : 'style-loader',
             {
@@ -66,6 +67,7 @@ module.exports = (enviroment) => {
         },
         {
           test: /\.less$/,
+          sideEffects: true,
           use: [
             isProduction ? MiniCssExtractPlugin.loader : 'style-loader',
             {
