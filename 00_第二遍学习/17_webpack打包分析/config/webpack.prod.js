@@ -11,6 +11,12 @@ const glob = require('glob');
 const webpack = require('webpack');
 const resolveApp = require('./path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+//打包时间分析
+const SpeedMeasurePlugin = require('speed-measure-webpack-plugin');
+const smp = new SpeedMeasurePlugin();
+
+//打包大小分析
+const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 const prodConfig = {
   mode: 'development',
@@ -69,6 +75,7 @@ const prodConfig = {
       deleteOriginalAssets: false,
     }),
     new InineChunkHtmlPlugin(HtmlWebpackPlugin, [/runtime-.*\.js$/]),
+    new BundleAnalyzerPlugin(),
   ],
 };
 
